@@ -282,9 +282,9 @@ const PLAN = [
   {
     short: "Dom",
     name: "Domingo",
-    tag: "longao",
+    tag: "corrida",
     tagLabel: "Longão",
-    tagClass: "tag-longao",
+    tagClass: "tag-corrida",
     title: "Longão",
     variants: [
       "V1 Velocidade",
