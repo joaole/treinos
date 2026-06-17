@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <title>Treino</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hdr">
+  <button class="hdr-back" id="btnBack" onclick="goBack()">←</button>
+  <div class="hdr-title" id="hdrTitle">Treino</div>
+</header>
+
+<div id="content"></div>
+
+<!-- Log modal -->
+<div class="overlay" id="logOverlay" style="display:none" onclick="overlayClick(event,'logOverlay')">
+  <div class="sheet">
+    <div class="handle"></div>
+    <button class="sheet-close" onclick="closeLog()">×</button>
+    <div class="sheet-title" id="logTitle"></div>
+    <div class="sheet-subtitle" id="logSubtitle"></div>
+    <div id="logForm"></div>
+  </div>
+</div>
+
+<!-- History modal -->
+<div class="overlay" id="histOverlay" style="display:none" onclick="overlayClick(event,'histOverlay')">
+  <div class="sheet">
+    <div class="handle"></div>
+    <button class="sheet-close" onclick="closeHist()">×</button>
+    <div id="histContent"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
