@@ -118,6 +118,14 @@ const PLAN = [
         label: "Exercícios",
         items: [
           {
+            name: "Remada curvada pronada",
+            detail: "3x 6–8",
+          },
+          {
+            name: "Remada cavalinho",
+            detail: "3x 6–8",
+          },
+          {
             name: "Puxada aberta",
             detail: "3x 6–8",
           },
@@ -126,32 +134,20 @@ const PLAN = [
             detail: "3x 6–8",
           },
           {
-            name: "Remada curvada pronada",
+            name: "PullDown polia corda",
             detail: "3x 6–8",
           },
           {
-            name: "Remada unilateral banco",
-            detail: "3x 6–8",
-          },
-          {
-            name: "Crucifixo invertido deitado",
+            name: "Face Pull",
             detail: "3x 8–10",
           },
           {
-            name: "Rosca alternada com giro",
+            name: "Rosca direta barra polia",
             detail: "3x 6–8",
           },
           {
-            name: "Rosca scott barra",
+            name: "Rosca martelo halter",
             detail: "3x 6–8",
-          },
-          {
-            name: "Rosca martelo",
-            detail: "3x 6–8",
-          },
-          {
-            name: "Antebraço biset",
-            detail: "Rosca pegada invertida + extensão de punho",
           },
         ],
       },
@@ -218,8 +214,9 @@ const PLAN = [
           items: [
             { name: "Cadeira extensora unilateral", detail: "3x 6–8" },
             { name: "Mesa flexora unilateral", detail: "3x 6–8" },
+            { name: "Stiff", detail: "3x 8–10" },
+            { name: "Front squat", detail: "3x 6–8" },
             { name: "Afundo", detail: "3x 8–10" },
-            { name: "Stiff unilateral", detail: "3x 8–10" },
             { name: "Avanço subindo em caixa", detail: "3x 8–10" },
             { name: "Cadeira abdutora", detail: "2 séries" },
             { name: "Panturrilha em pé unilateral", detail: "3 séries" },
@@ -918,10 +915,12 @@ function showHistory(exName) {
   document.getElementById("histContent").innerHTML = `
     <div class="hist-name">${esc(exName)}</div>
     <div class="hist-sub">Histórico de cargas · ${entries.length} sessão${entries.length !== 1 ? "ões" : ""}</div>
-    <table class="hist-table">
-      <thead><tr><th>Data</th><th>Séries</th><th>Nota</th></tr></thead>
-      <tbody>${rows}</tbody>
-    </table>
+    <div class="hist-table-wrap">
+      <table class="hist-table">
+        <thead><tr><th>Data</th><th>Séries</th><th>Nota</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
   `;
 
   document.getElementById("histOverlay").style.display = "flex";
